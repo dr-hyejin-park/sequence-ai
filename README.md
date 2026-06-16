@@ -99,6 +99,28 @@ python run_pipeline.py --skip-data --no-pretrain
 | `artifacts/scam_classifier.pt` | fine-tuning된 분류기 |
 | `reports/performance_report.md` | Train/Valid 성능 리포트 |
 
+## 결과 (전체 10만 명 실행)
+
+`python run_pipeline.py` 기본 설정으로 학습한 결과입니다.
+(데이터 10만 명, scam 1,000명(1%) / MLM 3 epoch 사전학습 → 5 epoch fine-tuning, CPU)
+
+| 지표 | Train (80,000) | Valid (20,000) |
+|------|---------------:|---------------:|
+| ROC-AUC | 1.0000 | 1.0000 |
+| PR-AUC (Average Precision) | 1.0000 | 1.0000 |
+| Best-F1 | 0.9994 | 0.9975 |
+| Recall @ 상위 1% | 0.9988 | 0.9950 |
+
+- Valid Confusion Matrix(threshold=0.5) `[[TN,FP],[FN,TP]] = [[19792, 8], [0, 200]]`
+  → 실제 scam 200건을 **전부 적발**, 오탐 8건.
+- 상세 수치는 `reports/performance_report.md`, `reports/metrics.json` 참고.
+
+> **해석 주의**: 점수가 매우 높은 이유는 데이터가 **합성**이고, scam 시나리오의
+> 선행 지표 군집이 비교적 뚜렷하게 주입되었기 때문입니다. 실제 운영 데이터는 훨씬
+> 잡음이 많아 성능이 낮아집니다. 본 결과는 *파이프라인(데이터→사전학습→fine-tuning→평가)이
+> 의도대로 동작하고 학습이 수렴함*을 보여주는 데모로 보시면 됩니다. 난이도를 높이려면
+> `src/data_generation.py`의 위험 이벤트 기저 발생률을 키우거나 시나리오 신호를 약화시키세요.
+
 ## 프로젝트 구조
 
 ```
