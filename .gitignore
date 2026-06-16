@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated data & model artifacts (재현 가능; 저장소에는 코드/리포트만 보관)
+data/
+artifacts/
+reports/run_full.log
+
+# OS
+.DS_Store

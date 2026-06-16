@@ -1,0 +1,9 @@
+# Core
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+matplotlib>=3.8
+
+# Deep learning (BERT-style transformer encoder, MLM pretraining + fine-tuning)
+# CPU build is sufficient; a CUDA GPU will be used automatically if available.
+torch>=2.2
