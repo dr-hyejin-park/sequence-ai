@@ -1,0 +1,104 @@
+{
+  "train": {
+    "n": 80000,
+    "n_pos": 800,
+    "pos_rate": 0.01,
+    "roc_auc": 0.9999999684343434,
+    "pr_auc": 0.9999968827930173,
+    "threshold": 0.5,
+    "precision": 0.9603841536614646,
+    "recall": 1.0,
+    "f1": 0.9797917942437232,
+    "confusion_matrix": [
+      [
+        79167,
+        33
+      ],
+      [
+        0,
+        800
+      ]
+    ],
+    "best_f1_threshold": 0.9996429681777954,
+    "best_f1": 0.9993746091302067,
+    "best_f1_precision": 1.0,
+    "best_f1_recall": 0.99875,
+    "recall_at_topk": [
+      {
+        "k_frac": 0.01,
+        "k": 800,
+        "recall": 0.99875,
+        "precision": 0.99875
+      },
+      {
+        "k_frac": 0.02,
+        "k": 1600,
+        "recall": 1.0,
+        "precision": 0.5
+      },
+      {
+        "k_frac": 0.05,
+        "k": 4000,
+        "recall": 1.0,
+        "precision": 0.2
+      },
+      {
+        "k_frac": 0.1,
+        "k": 8000,
+        "recall": 1.0,
+        "precision": 0.1
+      }
+    ]
+  },
+  "valid": {
+    "n": 20000,
+    "n_pos": 200,
+    "pos_rate": 0.01,
+    "roc_auc": 0.9999994949494949,
+    "pr_auc": 0.9999501243781094,
+    "threshold": 0.5,
+    "precision": 0.9615384615384616,
+    "recall": 1.0,
+    "f1": 0.9803921568627451,
+    "confusion_matrix": [
+      [
+        19792,
+        8
+      ],
+      [
+        0,
+        200
+      ]
+    ],
+    "best_f1_threshold": 0.9995313882827759,
+    "best_f1": 0.9975062344134651,
+    "best_f1_precision": 0.9950248756218906,
+    "best_f1_recall": 1.0,
+    "recall_at_topk": [
+      {
+        "k_frac": 0.01,
+        "k": 200,
+        "recall": 0.995,
+        "precision": 0.995
+      },
+      {
+        "k_frac": 0.02,
+        "k": 400,
+        "recall": 1.0,
+        "precision": 0.5
+      },
+      {
+        "k_frac": 0.05,
+        "k": 1000,
+        "recall": 1.0,
+        "precision": 0.2
+      },
+      {
+        "k_frac": 0.1,
+        "k": 2000,
+        "recall": 1.0,
+        "precision": 0.1
+      }
+    ]
+  }
+}
