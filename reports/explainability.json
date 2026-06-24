@@ -1,0 +1,2226 @@
+{
+  "summary": {
+    "valid_n": 20000,
+    "predicted_scam": 208,
+    "threshold": 0.5,
+    "global_cases_used": 208,
+    "global_tp": 200,
+    "global_fp": 8,
+    "precision_in_predicted": 0.9615384615384616,
+    "mean_completeness_error": 0.0005253743326578003,
+    "ig_steps": 64
+  },
+  "global": [
+    {
+      "token": "increase_transfer_limit",
+      "is_risk": true,
+      "freq_in_top5": 176,
+      "total_attribution": 381.88653668016195
+    },
+    {
+      "token": "open_link_messenger",
+      "is_risk": true,
+      "freq_in_top5": 134,
+      "total_attribution": 363.48962948843837
+    },
+    {
+      "token": "add_new_payee",
+      "is_risk": true,
+      "freq_in_top5": 232,
+      "total_attribution": 361.9595546685159
+    },
+    {
+      "token": "login_new_device",
+      "is_risk": true,
+      "freq_in_top5": 94,
+      "total_attribution": 310.1098637059331
+    },
+    {
+      "token": "incoming_call_long",
+      "is_risk": true,
+      "freq_in_top5": 92,
+      "total_attribution": 143.3954383637756
+    },
+    {
+      "token": "change_phone_number",
+      "is_risk": true,
+      "freq_in_top5": 64,
+      "total_attribution": 119.76307351142168
+    },
+    {
+      "token": "apply_quick_loan",
+      "is_risk": true,
+      "freq_in_top5": 58,
+      "total_attribution": 87.64053822681308
+    },
+    {
+      "token": "receive_otp",
+      "is_risk": true,
+      "freq_in_top5": 61,
+      "total_attribution": 42.2291940767318
+    },
+    {
+      "token": "login_unusual_location",
+      "is_risk": true,
+      "freq_in_top5": 34,
+      "total_attribution": 31.394411781802773
+    },
+    {
+      "token": "view_crypto",
+      "is_risk": true,
+      "freq_in_top5": 39,
+      "total_attribution": 26.102453922852874
+    },
+    {
+      "token": "change_password",
+      "is_risk": true,
+      "freq_in_top5": 29,
+      "total_attribution": 22.71299408003688
+    },
+    {
+      "token": "disable_security_alert",
+      "is_risk": true,
+      "freq_in_top5": 8,
+      "total_attribution": 3.626254031434655
+    },
+    {
+      "token": "transfer_known_payee_medium",
+      "is_risk": false,
+      "freq_in_top5": 8,
+      "total_attribution": 3.5350067913532257
+    },
+    {
+      "token": "input_otp",
+      "is_risk": true,
+      "freq_in_top5": 2,
+      "total_attribution": 1.7703833654522896
+    },
+    {
+      "token": "reissue_cert",
+      "is_risk": true,
+      "freq_in_top5": 5,
+      "total_attribution": 1.2141962256282568
+    },
+    {
+      "token": "night_activity",
+      "is_risk": true,
+      "freq_in_top5": 1,
+      "total_attribution": 0.5129185318946838
+    },
+    {
+      "token": "transfer_known_payee_small",
+      "is_risk": false,
+      "freq_in_top5": 1,
+      "total_attribution": 0.4185333847999573
+    },
+    {
+      "token": "search_branch_atm",
+      "is_risk": false,
+      "freq_in_top5": 1,
+      "total_attribution": 0.1374731957912445
+    },
+    {
+      "token": "payment_qr",
+      "is_risk": false,
+      "freq_in_top5": 1,
+      "total_attribution": 0.06505788117647171
+    }
+  ],
+  "cases": [
+    {
+      "user_index": 46463,
+      "true_label": 1,
+      "pred_score": 0.9997606873512268,
+      "logit_input": 8.33739948272705,
+      "logit_baseline": -8.295736312866211,
+      "completeness_error": 2.86102294921875e-05,
+      "top_contributors": [
+        {
+          "position": 30,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 8.55448055267334,
+          "share": 0.4314767236579878
+        },
+        {
+          "position": 21,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 2.460341215133667,
+          "share": 0.12409636798517652
+        },
+        {
+          "position": 29,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 2.3459534645080566,
+          "share": 0.11832680061487942
+        },
+        {
+          "position": 28,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.9238533973693848,
+          "share": 0.09703662958656432
+        },
+        {
+          "position": 23,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.1899083852767944,
+          "share": 0.06001741056877509
+        },
+        {
+          "position": 25,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.7760239839553833,
+          "share": 0.03914162689544589
+        },
+        {
+          "position": 22,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.5472190976142883,
+          "share": 0.02760101000965007
+        },
+        {
+          "position": 19,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.5402588844299316,
+          "share": 0.02724994603069125
+        },
+        {
+          "position": 24,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.4655378460884094,
+          "share": 0.023481115344432042
+        },
+        {
+          "position": 27,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.2832099497318268,
+          "share": 0.014284736573449112
+        }
+      ],
+      "sequence_tail": "check_notification(▽-0.09) · check_notification(▽-0.05) · transfer_known_payee_small(▽-0.16) · apply_quick_loan(▲+0.13) · view_transactions(▽-0.51) · update_profile(▲+0.09) · open_link_sms(▲+0.54) · login_unusual_location(▲+0.25) · receive_otp(▲+2.46) · input_otp(▲+0.55) · add_new_payee(▲+1.19) · input_otp(▲+0.47) · receive_otp(▲+0.78) · open_app(▽-0.27) · input_otp(▲+0.28) · change_phone_number(▲+1.92) · add_new_payee(▲+2.35) · increase_transfer_limit(▲+8.55)"
+    },
+    {
+      "user_index": 50818,
+      "true_label": 1,
+      "pred_score": 0.9997596144676208,
+      "logit_input": 8.3329496383667,
+      "logit_baseline": -8.333691596984863,
+      "completeness_error": 1.52587890625e-05,
+      "top_contributors": [
+        {
+          "position": 25,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 5.566583156585693,
+          "share": 0.30169074773760435
+        },
+        {
+          "position": 19,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 4.287134170532227,
+          "share": 0.2323487635371303
+        },
+        {
+          "position": 21,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 3.2449324131011963,
+          "share": 0.1758648094402932
+        },
+        {
+          "position": 23,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 2.418532609939575,
+          "share": 0.13107662115084362
+        },
+        {
+          "position": 22,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.7943100929260254,
+          "share": 0.09724578585834148
+        },
+        {
+          "position": 20,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.7914127707481384,
+          "share": 0.042892004639079453
+        },
+        {
+          "position": 7,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "1-2d",
+          "attribution": 0.21305502951145172,
+          "share": 0.011546891397198108
+        },
+        {
+          "position": 16,
+          "token": "login_success",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.06969036161899567,
+          "share": 0.0037769915072704404
+        },
+        {
+          "position": 15,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": 0.06563833355903625,
+          "share": 0.0035573847321849652
+        },
+        {
+          "position": 10,
+          "token": "withdrawal_atm",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": -0.02241729199886322,
+          "share": -0.0012149444991921136
+        }
+      ],
+      "sequence_tail": "view_balance(▽-0.17) · open_chatbot(▽-0.08) · withdrawal_atm(▽-0.02) · view_balance(▽-0.06) · view_transactions(▽-0.35) · idle(▽-0.28) · transit_payment(▽-0.08) · transfer_known_payee_medium(▲+0.07) · login_success(▲+0.07) · transit_payment(▽-0.17) · check_notification(▽-0.14) · open_link_messenger(▲+4.29) · incoming_call_long(▲+0.79) · add_new_payee(▲+3.24) · incoming_call_long(▲+1.79) · incoming_call_long(▲+2.42) · transfer_known_payee_medium(▽-0.03) · login_new_device(▲+5.57)"
+    },
+    {
+      "user_index": 45864,
+      "true_label": 1,
+      "pred_score": 0.9997592568397522,
+      "logit_input": 8.331476211547852,
+      "logit_baseline": 4.6696624755859375,
+      "completeness_error": 0.0017824172973632812,
+      "top_contributors": [
+        {
+          "position": 42,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 2.276357650756836,
+          "share": 0.27627492177233925
+        },
+        {
+          "position": 34,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 1.6562178134918213,
+          "share": 0.2010103494537758
+        },
+        {
+          "position": 29,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 1.2838138341903687,
+          "share": 0.1558127592530402
+        },
+        {
+          "position": 43,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.0214629173278809,
+          "share": 0.12397198985154169
+        },
+        {
+          "position": 36,
+          "token": "change_password",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.43575096130371094,
+          "share": 0.05288582956477796
+        },
+        {
+          "position": 33,
+          "token": "grant_accessibility_perm",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.2970030903816223,
+          "share": 0.036046403136187545
+        },
+        {
+          "position": 31,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.26182007789611816,
+          "share": 0.03177634301671723
+        },
+        {
+          "position": 20,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.2235545516014099,
+          "share": 0.02713216714209883
+        },
+        {
+          "position": 41,
+          "token": "disable_security_alert",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.15842388570308685,
+          "share": 0.019227447240084752
+        },
+        {
+          "position": 30,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.1442723125219345,
+          "share": 0.01750991187288158
+        }
+      ],
+      "sequence_tail": "view_balance(▽-0.04) · transfer_known_payee_small(▽-0.19) · open_link_messenger(▲+1.28) · incoming_call_long(▲+0.14) · open_link_sms(▲+0.26) · install_external_app(▲+0.07) · grant_accessibility_perm(▲+0.30) · login_new_device(▲+1.66) · reissue_cert(▲+0.10) · change_password(▲+0.44) · card_payment_small(▽-0.34) · update_profile(▲+0.05) · logout(▽-0.34) · disable_security_alert(▲+0.08) · disable_security_alert(▲+0.16) · increase_transfer_limit(▲+2.28) · add_new_payee(▲+1.02) · night_activity(▲+0.09)"
+    },
+    {
+      "user_index": 43228,
+      "true_label": 1,
+      "pred_score": 0.9997591376304626,
+      "logit_input": 8.330818176269531,
+      "logit_baseline": 8.080093383789062,
+      "completeness_error": 9.340047836303711e-05,
+      "top_contributors": [
+        {
+          "position": 57,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.16604264080524445,
+          "share": 0.2971875278801781
+        },
+        {
+          "position": 64,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.11828532814979553,
+          "share": 0.21171022146392574
+        },
+        {
+          "position": 61,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.05623404309153557,
+          "share": 0.10064918365567825
+        },
+        {
+          "position": 47,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.03895201534032822,
+          "share": 0.06971735145143083
+        },
+        {
+          "position": 60,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.03441864624619484,
+          "share": 0.0616034070602781
+        },
+        {
+          "position": 51,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.02504585310816765,
+          "share": 0.04482773300140937
+        },
+        {
+          "position": 49,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.022042835131287575,
+          "share": 0.039452851679354806
+        },
+        {
+          "position": 56,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.021043790504336357,
+          "share": 0.037664735075777944
+        },
+        {
+          "position": 38,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.019620386883616447,
+          "share": 0.0351170894760334
+        },
+        {
+          "position": 50,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.0183136947453022,
+          "share": 0.03277833718684547
+        }
+      ],
+      "sequence_tail": "open_link_messenger(▲+0.04) · view_event_promo(▽-0.01) · view_crypto(▲+0.02) · apply_quick_loan(▲+0.02) · view_crypto(▲+0.03) · view_balance(▽-0.02) · view_card_benefit(▽-0.01) · biometric_auth(▽-0.01) · withdrawal_atm(▽-0.01) · view_crypto(▲+0.02) · increase_transfer_limit(▲+0.17) · transit_payment(▽-0.03) · reissue_cert(▲+0.01) · apply_quick_loan(▲+0.03) · add_new_payee(▲+0.06) · view_crypto(▲+0.02) · card_payment_medium(▽-0.02) · increase_transfer_limit(▲+0.12)"
+    },
+    {
+      "user_index": 46657,
+      "true_label": 1,
+      "pred_score": 0.9997580647468567,
+      "logit_input": 8.326680183410645,
+      "logit_baseline": 7.188717365264893,
+      "completeness_error": 0.0005445480346679688,
+      "top_contributors": [
+        {
+          "position": 64,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.318862795829773,
+          "share": 0.37878159730726846
+        },
+        {
+          "position": 61,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.30180057883262634,
+          "share": 0.08667808787991269
+        },
+        {
+          "position": 63,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.26790300011634827,
+          "share": 0.07694259526339496
+        },
+        {
+          "position": 34,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.25344318151474,
+          "share": 0.07278968928711821
+        },
+        {
+          "position": 59,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.24482934176921844,
+          "share": 0.0703157670655844
+        },
+        {
+          "position": 56,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.20944836735725403,
+          "share": 0.06015423847866288
+        },
+        {
+          "position": 60,
+          "token": "reissue_cert",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.1655244380235672,
+          "share": 0.04753914601746579
+        },
+        {
+          "position": 54,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.1265692412853241,
+          "share": 0.03635108938975034
+        },
+        {
+          "position": 62,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.10985763370990753,
+          "share": 0.03155146244523112
+        },
+        {
+          "position": 51,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.09505307674407959,
+          "share": 0.027299546512296918
+        }
+      ],
+      "sequence_tail": "pay_subscription(▽-0.04) · withdrawal_atm(▲+0.02) · open_chatbot(▽-0.15) · view_transactions(▽-0.11) · open_link_sms(▲+0.10) · login_unusual_location(▲+0.09) · open_chatbot(▽-0.14) · receive_otp(▲+0.13) · input_otp(▲+0.09) · receive_otp(▲+0.21) · open_link_sms(▲+0.09) · input_otp(▽-0.07) · add_new_payee(▲+0.24) · reissue_cert(▲+0.17) · change_phone_number(▲+0.30) · login_unusual_location(▲+0.11) · add_new_payee(▲+0.27) · increase_transfer_limit(▲+1.32)"
+    },
+    {
+      "user_index": 82468,
+      "true_label": 1,
+      "pred_score": 0.9997580647468567,
+      "logit_input": 8.326653480529785,
+      "logit_baseline": -8.246630668640137,
+      "completeness_error": 0.0001068115234375,
+      "top_contributors": [
+        {
+          "position": 29,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 5.245205879211426,
+          "share": 0.24074328040134194
+        },
+        {
+          "position": 22,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 4.91428279876709,
+          "share": 0.22555464724159568
+        },
+        {
+          "position": 32,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 3.6448497772216797,
+          "share": 0.16729049576798852
+        },
+        {
+          "position": 31,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.895560622215271,
+          "share": 0.0870020153451671
+        },
+        {
+          "position": 21,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.6163769960403442,
+          "share": 0.07418810802723386
+        },
+        {
+          "position": 26,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.1571284532546997,
+          "share": 0.053109621642563276
+        },
+        {
+          "position": 24,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.9035192131996155,
+          "share": 0.04146952175002455
+        },
+        {
+          "position": 18,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.8973742127418518,
+          "share": 0.04118747990031699
+        },
+        {
+          "position": 27,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.8788986206054688,
+          "share": 0.04033949132547409
+        },
+        {
+          "position": 25,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.6343518495559692,
+          "share": 0.029115338598248157
+        }
+      ],
+      "sequence_tail": "view_stock(▽-0.12) · check_notification(▽-0.20) · check_notification(▽-0.35) · login_new_device(▲+0.90) · view_point(▽-0.18) · check_notification(▽-0.13) · view_crypto(▲+1.62) · open_link_messenger(▲+4.91) · logout(▽-0.47) · view_crypto(▲+0.90) · view_crypto(▲+0.63) · view_crypto(▲+1.16) · increase_transfer_limit(▲+0.88) · pay_subscription(▽-0.40) · apply_quick_loan(▲+5.25) · idle(▽-0.25) · apply_quick_loan(▲+1.90) · add_new_payee(▲+3.64)"
+    },
+    {
+      "user_index": 12006,
+      "true_label": 1,
+      "pred_score": 0.999757707118988,
+      "logit_input": 8.324872016906738,
+      "logit_baseline": -8.331717491149902,
+      "completeness_error": 1.1444091796875e-05,
+      "top_contributors": [
+        {
+          "position": 26,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 5.113411903381348,
+          "share": 0.26464339051192665
+        },
+        {
+          "position": 18,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 4.77157735824585,
+          "share": 0.24695182669346347
+        },
+        {
+          "position": 24,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 4.102769374847412,
+          "share": 0.21233783203151085
+        },
+        {
+          "position": 27,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 1.9761123657226562,
+          "share": 0.10227321529712223
+        },
+        {
+          "position": 21,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 1.3777211904525757,
+          "share": 0.07130362542872698
+        },
+        {
+          "position": 25,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.8457334041595459,
+          "share": 0.04377072682096503
+        },
+        {
+          "position": 23,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.701444149017334,
+          "share": 0.036303071483043854
+        },
+        {
+          "position": 20,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.41222041845321655,
+          "share": 0.02133436758841303
+        },
+        {
+          "position": 6,
+          "token": "transit_payment",
+          "is_risk": false,
+          "time_gap": "12-24h",
+          "attribution": 0.020905211567878723,
+          "share": 0.0010819441447762394
+        },
+        {
+          "position": 7,
+          "token": "transit_payment",
+          "is_risk": false,
+          "time_gap": "12-24h",
+          "attribution": -0.04512610286474228,
+          "share": -0.002335490488223383
+        }
+      ],
+      "sequence_tail": "view_fund(▽-0.10) · transfer_known_payee_small(▽-0.07) · transit_payment(▽-0.15) · transfer_known_payee_small(▽-0.09) · view_point(▽-0.06) · biometric_auth(▽-0.15) · login_success(▽-0.07) · view_balance(▽-0.56) · open_link_messenger(▲+4.77) · transit_payment(▽-0.20) · view_crypto(▲+0.41) · view_crypto(▲+1.38) · idle(▽-0.21) · view_crypto(▲+0.70) · increase_transfer_limit(▲+4.10) · apply_quick_loan(▲+0.85) · increase_transfer_limit(▲+5.11) · add_new_payee(▲+1.98)"
+    },
+    {
+      "user_index": 96143,
+      "true_label": 1,
+      "pred_score": 0.9997574687004089,
+      "logit_input": 8.324104309082031,
+      "logit_baseline": 8.226066589355469,
+      "completeness_error": 4.172325134277344e-05,
+      "top_contributors": [
+        {
+          "position": 58,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.08815822005271912,
+          "share": 0.26056882497515704
+        },
+        {
+          "position": 61,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.06266120076179504,
+          "share": 0.1852074082742299
+        },
+        {
+          "position": 59,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.05553077906370163,
+          "share": 0.16413205531975225
+        },
+        {
+          "position": 49,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.019452519714832306,
+          "share": 0.05749571851460712
+        },
+        {
+          "position": 55,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.01602223701775074,
+          "share": 0.04735684852407596
+        },
+        {
+          "position": 50,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.013605300337076187,
+          "share": 0.04021312045712867
+        },
+        {
+          "position": 54,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.013373378664255142,
+          "share": 0.03952763068955948
+        },
+        {
+          "position": 56,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.011747143231332302,
+          "share": 0.03472097447943786
+        },
+        {
+          "position": 10,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.010179324075579643,
+          "share": 0.03008697897744482
+        },
+        {
+          "position": 41,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.008672009222209454,
+          "share": 0.025631815749609693
+        }
+      ],
+      "sequence_tail": "open_link_sms(▲+0.01) · payment_bill(▽-0.00) · login_unusual_location(▲+0.02) · receive_otp(▲+0.01) · input_otp(▲+0.00) · login_unusual_location(▲+0.01) · view_event_promo(▽-0.01) · change_phone_number(▲+0.01) · receive_otp(▲+0.02) · input_otp(▲+0.01) · biometric_auth(▽-0.02) · change_phone_number(▲+0.09) · add_new_payee(▲+0.06) · view_savings(▽-0.02) · increase_transfer_limit(▲+0.06) · update_profile(▲+0.01) · transit_payment(▽-0.01) · view_balance(▽-0.03)"
+    },
+    {
+      "user_index": 66140,
+      "true_label": 1,
+      "pred_score": 0.9997573494911194,
+      "logit_input": 8.32358169555664,
+      "logit_baseline": -8.294341087341309,
+      "completeness_error": 2.6702880859375e-05,
+      "top_contributors": [
+        {
+          "position": 21,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 6.1787238121032715,
+          "share": 0.2829881677820127
+        },
+        {
+          "position": 23,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 5.062378883361816,
+          "share": 0.23185909718357342
+        },
+        {
+          "position": 22,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 4.716415882110596,
+          "share": 0.21601384518304384
+        },
+        {
+          "position": 19,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 1.898285150527954,
+          "share": 0.08694226397098735
+        },
+        {
+          "position": 17,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.3823769092559814,
+          "share": 0.06331344799199666
+        },
+        {
+          "position": 16,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.7115764617919922,
+          "share": 0.03259050336007437
+        },
+        {
+          "position": 18,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.64439857006073,
+          "share": 0.029513727463529323
+        },
+        {
+          "position": 15,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.6210850477218628,
+          "share": 0.028445958265252883
+        },
+        {
+          "position": 20,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.6186184883117676,
+          "share": 0.02833298879948375
+        },
+        {
+          "position": 7,
+          "token": "biometric_auth",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": -0.021863460540771484,
+          "share": -0.001001355753705575
+        }
+      ],
+      "sequence_tail": "check_notification(▽-0.28) · biometric_auth(▽-0.02) · login_success(▽-0.27) · card_payment_small(▽-0.55) · card_payment_medium(▽-0.24) · view_event_promo(▽-0.25) · trade_stock_small(▽-0.16) · view_transactions(▽-0.40) · logout(▽-1.00) · open_link_sms(▲+0.62) · login_unusual_location(▲+0.71) · receive_otp(▲+1.38) · input_otp(▲+0.64) · receive_otp(▲+1.90) · input_otp(▲+0.62) · change_phone_number(▲+6.18) · add_new_payee(▲+4.72) · increase_transfer_limit(▲+5.06)"
+    },
+    {
+      "user_index": 77832,
+      "true_label": 1,
+      "pred_score": 0.9997573494911194,
+      "logit_input": 8.323773384094238,
+      "logit_baseline": 8.172645568847656,
+      "completeness_error": 1.2814998626708984e-06,
+      "top_contributors": [
+        {
+          "position": 52,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.2870652973651886,
+          "share": 0.385568959689647
+        },
+        {
+          "position": 54,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.10209648311138153,
+          "share": 0.13712989742242762
+        },
+        {
+          "position": 47,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.09819285571575165,
+          "share": 0.13188677828624623
+        },
+        {
+          "position": 42,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "1-2d",
+          "attribution": 0.06710793823003769,
+          "share": 0.09013537396460818
+        },
+        {
+          "position": 49,
+          "token": "change_password",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.06244814395904541,
+          "share": 0.08387661665076733
+        },
+        {
+          "position": 51,
+          "token": "grant_accessibility_perm",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.03168496489524841,
+          "share": 0.04255735215853157
+        },
+        {
+          "position": 46,
+          "token": "grant_accessibility_perm",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.03128484636545181,
+          "share": 0.04201993685022989
+        },
+        {
+          "position": 43,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.025180421769618988,
+          "share": 0.033820838378480655
+        },
+        {
+          "position": 48,
+          "token": "reissue_cert",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.017080672085285187,
+          "share": 0.022941738437806856
+        },
+        {
+          "position": 50,
+          "token": "disable_security_alert",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.009738679975271225,
+          "share": 0.01308041320661238
+        }
+      ],
+      "sequence_tail": "payment_qr(▽-0.02) · view_card_benefit(▽-0.01) · transfer_known_payee_medium(▽-0.01) · deposit_savings(▽-0.01) · incoming_call_long(▲+0.07) · open_link_sms(▲+0.03) · install_external_app(▽-0.01) · check_notification(▽-0.02) · grant_accessibility_perm(▲+0.03) · login_new_device(▲+0.10) · reissue_cert(▲+0.02) · change_password(▲+0.06) · disable_security_alert(▲+0.01) · grant_accessibility_perm(▲+0.03) · increase_transfer_limit(▲+0.29) · set_alarm(▽-0.04) · add_new_payee(▲+0.10) · night_activity(▽-0.02)"
+    },
+    {
+      "user_index": 4314,
+      "true_label": 1,
+      "pred_score": 0.9997572302818298,
+      "logit_input": 8.323343276977539,
+      "logit_baseline": 8.165434837341309,
+      "completeness_error": 6.051361560821533e-05,
+      "top_contributors": [
+        {
+          "position": 56,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.09579071402549744,
+          "share": 0.208689837607383
+        },
+        {
+          "position": 53,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.08807357400655746,
+          "share": 0.19187726121383672
+        },
+        {
+          "position": 63,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.07586228847503662,
+          "share": 0.16527373058484332
+        },
+        {
+          "position": 62,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.056838080286979675,
+          "share": 0.12382755328296122
+        },
+        {
+          "position": 64,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.041478078812360764,
+          "share": 0.09036422391959355
+        },
+        {
+          "position": 57,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.031631920486688614,
+          "share": 0.06891336406386514
+        },
+        {
+          "position": 60,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.021128546446561813,
+          "share": 0.04603069276255075
+        },
+        {
+          "position": 54,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.019979700446128845,
+          "share": 0.0435278146108916
+        },
+        {
+          "position": 55,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.01617206446826458,
+          "share": 0.03523249139535514
+        },
+        {
+          "position": 58,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.011470241472125053,
+          "share": 0.024989090586568643
+        }
+      ],
+      "sequence_tail": "open_app(▽-0.00) · view_balance(▽-0.00) · view_savings(▽-0.01) · view_statement(▽-0.02) · check_notification(▽-0.01) · open_app(▽-0.01) · open_link_messenger(▲+0.09) · view_crypto(▲+0.02) · view_crypto(▲+0.02) · open_link_messenger(▲+0.10) · view_crypto(▲+0.03) · view_crypto(▲+0.01) · view_stock(▽-0.01) · view_crypto(▲+0.02) · view_balance(▽-0.02) · increase_transfer_limit(▲+0.06) · apply_quick_loan(▲+0.08) · add_new_payee(▲+0.04)"
+    },
+    {
+      "user_index": 28338,
+      "true_label": 1,
+      "pred_score": 0.9997569918632507,
+      "logit_input": 8.322063446044922,
+      "logit_baseline": 8.199861526489258,
+      "completeness_error": 8.732080459594727e-06,
+      "top_contributors": [
+        {
+          "position": 64,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.29644975066185,
+          "share": 0.3460005818402291
+        },
+        {
+          "position": 55,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.17746832966804504,
+          "share": 0.2071317151937792
+        },
+        {
+          "position": 60,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.09196049720048904,
+          "share": 0.10733146331426704
+        },
+        {
+          "position": 63,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.08998990803956985,
+          "share": 0.10503149512497408
+        },
+        {
+          "position": 61,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.07425341010093689,
+          "share": 0.08666468108401605
+        },
+        {
+          "position": 57,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.04947403073310852,
+          "share": 0.05774349069756137
+        },
+        {
+          "position": 33,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.025810346007347107,
+          "share": 0.03012448051010954
+        },
+        {
+          "position": 26,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 0.022191017866134644,
+          "share": 0.025900190761393674
+        },
+        {
+          "position": 44,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.021834034472703934,
+          "share": 0.02548353849044872
+        },
+        {
+          "position": 47,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "1-2d",
+          "attribution": 0.006676125340163708,
+          "share": 0.0077920229211790185
+        }
+      ],
+      "sequence_tail": "transfer_known_payee_medium(▲+0.01) · view_point(▽-0.03) · payment_qr(▽-0.04) · login_success(▽-0.03) · open_app(▽-0.06) · view_event_promo(▽-0.05) · transit_payment(▽-0.00) · check_notification(▽-0.01) · open_link_messenger(▲+0.18) · transit_payment(▽-0.04) · add_new_payee(▲+0.05) · login_success(▽-0.05) · check_notification(▽-0.03) · incoming_call_long(▲+0.09) · add_new_payee(▲+0.07) · transfer_known_payee_medium(▽-0.00) · incoming_call_long(▲+0.09) · login_new_device(▲+0.30)"
+    },
+    {
+      "user_index": 40380,
+      "true_label": 1,
+      "pred_score": 0.9997568726539612,
+      "logit_input": 8.321799278259277,
+      "logit_baseline": 8.196636199951172,
+      "completeness_error": 2.3096799850463867e-06,
+      "top_contributors": [
+        {
+          "position": 62,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.12290754169225693,
+          "share": 0.16265012240730833
+        },
+        {
+          "position": 63,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.09988461434841156,
+          "share": 0.13218265150119282
+        },
+        {
+          "position": 59,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.09966325014829636,
+          "share": 0.1318897084177205
+        },
+        {
+          "position": 58,
+          "token": "change_password",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.09207385778427124,
+          "share": 0.12184625965933123
+        },
+        {
+          "position": 55,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.08279551565647125,
+          "share": 0.10956773336187924
+        },
+        {
+          "position": 37,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.07170610874891281,
+          "share": 0.09489252819460786
+        },
+        {
+          "position": 47,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.041805364191532135,
+          "share": 0.05532327397825725
+        },
+        {
+          "position": 57,
+          "token": "reissue_cert",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.04032185673713684,
+          "share": 0.05336006923323264
+        },
+        {
+          "position": 61,
+          "token": "disable_security_alert",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.03835241496562958,
+          "share": 0.05075380162101578
+        },
+        {
+          "position": 49,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.016323156654834747,
+          "share": 0.021601306082829265
+        }
+      ],
+      "sequence_tail": "incoming_call_long(▲+0.04) · biometric_auth(▽-0.02) · open_link_sms(▲+0.02) · open_link_sms(▲+0.02) · set_alarm(▽-0.05) · view_security_center(▽-0.02) · install_external_app(▽-0.00) · grant_accessibility_perm(▲+0.01) · login_new_device(▲+0.08) · transfer_known_payee_small(▽-0.06) · reissue_cert(▲+0.04) · change_password(▲+0.09) · open_link_messenger(▲+0.10) · view_event_promo(▽-0.08) · disable_security_alert(▲+0.04) · increase_transfer_limit(▲+0.12) · add_new_payee(▲+0.10) · night_activity(▽-0.01)"
+    },
+    {
+      "user_index": 23890,
+      "true_label": 1,
+      "pred_score": 0.9997568726539612,
+      "logit_input": 8.321853637695312,
+      "logit_baseline": -2.2437784671783447,
+      "completeness_error": 0.004048347473144531,
+      "top_contributors": [
+        {
+          "position": 34,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 6.031136989593506,
+          "share": 0.2255997899101247
+        },
+        {
+          "position": 38,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 4.9004130363464355,
+          "share": 0.18330410225802285
+        },
+        {
+          "position": 33,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 3.7209959030151367,
+          "share": 0.13918700494203634
+        },
+        {
+          "position": 41,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 3.2417213916778564,
+          "share": 0.12125933570594831
+        },
+        {
+          "position": 40,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.913084626197815,
+          "share": 0.07156055160000692
+        },
+        {
+          "position": 31,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "1-2d",
+          "attribution": 1.7125242948532104,
+          "share": 0.06405842245027633
+        },
+        {
+          "position": 35,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 1.2627893686294556,
+          "share": 0.04723570642734567
+        },
+        {
+          "position": 8,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.9752672910690308,
+          "share": 0.03648069946861196
+        },
+        {
+          "position": 37,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.8953093886375427,
+          "share": 0.03348980637145256
+        },
+        {
+          "position": 36,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.8704233765602112,
+          "share": 0.03255892400117411
+        }
+      ],
+      "sequence_tail": "login_success(▲+0.12) · idle(▽-0.27) · view_balance(▽-0.93) · payment_qr(▽-0.15) · open_link_messenger(▲+1.71) · view_card_benefit(▽-1.35) · open_link_messenger(▲+3.72) · open_link_messenger(▲+6.03) · view_crypto(▲+1.26) · view_crypto(▲+0.87) · view_crypto(▲+0.90) · increase_transfer_limit(▲+4.90) · apply_quick_loan(▲+0.84) · add_new_payee(▲+1.91) · incoming_call_long(▲+3.24) · open_app(▽-2.61) · open_app(▽-3.53) · view_card_benefit(▽-0.29)"
+    },
+    {
+      "user_index": 53779,
+      "true_label": 1,
+      "pred_score": 0.9997565150260925,
+      "logit_input": 8.320396423339844,
+      "logit_baseline": 8.076882362365723,
+      "completeness_error": 1.341104507446289e-06,
+      "top_contributors": [
+        {
+          "position": 58,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.13614314794540405,
+          "share": 0.2597197945899275
+        },
+        {
+          "position": 64,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.08527707308530807,
+          "share": 0.16268276618539973
+        },
+        {
+          "position": 61,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.0781358852982521,
+          "share": 0.14905954788045758
+        },
+        {
+          "position": 63,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.06217473745346069,
+          "share": 0.11861052343648715
+        },
+        {
+          "position": 60,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.05158534646034241,
+          "share": 0.09840918025417715
+        },
+        {
+          "position": 53,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.026753518730401993,
+          "share": 0.051037591638502654
+        },
+        {
+          "position": 54,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.021281033754348755,
+          "share": 0.040597751695570054
+        },
+        {
+          "position": 57,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.018135488033294678,
+          "share": 0.03459700541583068
+        },
+        {
+          "position": 56,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.01498056948184967,
+          "share": 0.02857837862120242
+        },
+        {
+          "position": 59,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.008246282115578651,
+          "share": 0.01573140278824426
+        }
+      ],
+      "sequence_tail": "open_app(▽-0.01) · logout(▽-0.02) · view_balance(▽-0.01) · check_notification(▽-0.01) · view_transactions(▽-0.01) · open_link_sms(▲+0.01) · login_unusual_location(▲+0.03) · receive_otp(▲+0.02) · open_app(▽-0.03) · input_otp(▲+0.01) · receive_otp(▲+0.02) · increase_transfer_limit(▲+0.14) · input_otp(▲+0.01) · change_phone_number(▲+0.05) · add_new_payee(▲+0.08) · view_transactions(▽-0.01) · increase_transfer_limit(▲+0.06) · increase_transfer_limit(▲+0.09)"
+    }
+  ],
+  "false_positives": [
+    {
+      "user_index": 63863,
+      "true_label": 0,
+      "pred_score": 0.9995853304862976,
+      "logit_input": 7.7876996994018555,
+      "logit_baseline": -8.260773658752441,
+      "completeness_error": 0.0003032684326171875,
+      "top_contributors": [
+        {
+          "position": 32,
+          "token": "apply_quick_loan",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 8.659894943237305,
+          "share": 0.30576424440808625
+        },
+        {
+          "position": 38,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 7.626515865325928,
+          "share": 0.269277615526815
+        },
+        {
+          "position": 10,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 5.267735004425049,
+          "share": 0.1859935973735882
+        },
+        {
+          "position": 29,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 4.917555809020996,
+          "share": 0.1736294430978176
+        },
+        {
+          "position": 8,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 1.8049805164337158,
+          "share": 0.06373039250431803
+        },
+        {
+          "position": 27,
+          "token": "view_event_promo",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": 0.045448724180459976,
+          "share": 0.0016047070893396931
+        },
+        {
+          "position": 4,
+          "token": "view_stock",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": -0.03667428344488144,
+          "share": -0.0012948984531837955
+        },
+        {
+          "position": 16,
+          "token": "view_savings",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": -0.04681829363107681,
+          "share": -0.0016530639540565425
+        },
+        {
+          "position": 6,
+          "token": "login_success",
+          "is_risk": false,
+          "time_gap": "<1h",
+          "attribution": -0.0787302628159523,
+          "share": -0.002779814244833159
+        },
+        {
+          "position": 25,
+          "token": "open_app",
+          "is_risk": false,
+          "time_gap": "12-24h",
+          "attribution": -0.09753637760877609,
+          "share": -0.003443822009080921
+        }
+      ],
+      "sequence_tail": "card_payment_small(▽-0.66) · biometric_auth(▽-0.41) · open_app(▽-0.37) · view_event_promo(▽-0.34) · open_app(▽-0.10) · view_transactions(▽-0.37) · view_event_promo(▲+0.05) · transfer_known_payee_small(▽-0.16) · open_link_messenger(▲+4.92) · card_payment_small(▽-0.44) · set_alarm(▽-1.47) · apply_quick_loan(▲+8.66) · view_event_promo(▽-0.29) · biometric_auth(▽-0.29) · biometric_auth(▽-0.23) · login_success(▽-1.80) · check_notification(▽-0.35) · add_new_payee(▲+7.63)"
+    },
+    {
+      "user_index": 98622,
+      "true_label": 0,
+      "pred_score": 0.9852811694145203,
+      "logit_input": 4.203803062438965,
+      "logit_baseline": 1.7727373838424683,
+      "completeness_error": 0.0066585540771484375,
+      "top_contributors": [
+        {
+          "position": 30,
+          "token": "increase_transfer_limit",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 13.508477210998535,
+          "share": 0.41001371927150987
+        },
+        {
+          "position": 17,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 10.316167831420898,
+          "share": 0.31311970069773154
+        },
+        {
+          "position": 32,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 8.378844261169434,
+          "share": 0.2543174219461026
+        },
+        {
+          "position": 47,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": 0.5791075229644775,
+          "share": 0.017577260977680934
+        },
+        {
+          "position": 45,
+          "token": "search_branch_atm",
+          "is_risk": false,
+          "time_gap": "1-2d",
+          "attribution": 0.1374731957912445,
+          "share": 0.004172631409602246
+        },
+        {
+          "position": 25,
+          "token": "check_notification",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.026332929730415344,
+          "share": 0.0007992656973424185
+        },
+        {
+          "position": 22,
+          "token": "view_savings",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": -0.06274287402629852,
+          "share": -0.0019043922372213016
+        },
+        {
+          "position": 23,
+          "token": "view_balance",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": -0.10068967938423157,
+          "share": -0.0030561660868015017
+        },
+        {
+          "position": 1,
+          "token": "login_success",
+          "is_risk": false,
+          "time_gap": "<1h",
+          "attribution": -0.1181652620434761,
+          "share": -0.0035865906883783293
+        },
+        {
+          "position": 9,
+          "token": "view_stock",
+          "is_risk": false,
+          "time_gap": "12-24h",
+          "attribution": -0.13152967393398285,
+          "share": -0.003992231689914876
+        }
+      ],
+      "sequence_tail": "biometric_auth(▽-0.34) · card_payment_small(▽-1.30) · transit_payment(▽-0.29) · check_notification(▽-0.46) · view_stock(▽-0.73) · deposit_savings(▽-0.42) · login_success(▽-1.41) · login_success(▽-1.06) · search_branch_atm(▲+0.14) · open_link_sms(▽-0.22) · transfer_known_payee_medium(▲+0.58) · payment_qr(▽-0.22) · transfer_self(▽-2.36) · open_app(▽-1.00) · transit_payment(▽-0.84) · deposit_savings(▽-1.37) · open_app(▽-1.52) · payment_qr(▽-1.57)"
+    },
+    {
+      "user_index": 22184,
+      "true_label": 0,
+      "pred_score": 0.9779742956161499,
+      "logit_input": 3.7932746410369873,
+      "logit_baseline": 8.109716415405273,
+      "completeness_error": 5.91278076171875e-05,
+      "top_contributors": [
+        {
+          "position": 53,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 10.13526439666748,
+          "share": 0.2701964116862917
+        },
+        {
+          "position": 63,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 9.62765121459961,
+          "share": 0.2566639319253793
+        },
+        {
+          "position": 55,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 8.285295486450195,
+          "share": 0.2208780178379512
+        },
+        {
+          "position": 38,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 7.74159049987793,
+          "share": 0.20638336524299045
+        },
+        {
+          "position": 2,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": 0.9369160532951355,
+          "share": 0.02497728186892345
+        },
+        {
+          "position": 42,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.5044993758201599,
+          "share": 0.013449468677837525
+        },
+        {
+          "position": 39,
+          "token": "search_branch_atm",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.2302636355161667,
+          "share": 0.0061386073044888126
+        },
+        {
+          "position": 23,
+          "token": "withdrawal_atm",
+          "is_risk": false,
+          "time_gap": "12-24h",
+          "attribution": 0.04924841597676277,
+          "share": 0.001312915456110889
+        },
+        {
+          "position": 46,
+          "token": "transfer_known_payee_small",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": -0.02231787145137787,
+          "share": -0.0005949730117174832
+        },
+        {
+          "position": 16,
+          "token": "deposit",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": -0.05088595300912857,
+          "share": -0.001356570620182794
+        }
+      ],
+      "sequence_tail": "open_app(▽-0.74) · card_payment_medium(▽-0.21) · biometric_auth(▽-2.49) · transfer_self(▽-0.50) · set_alarm(▽-0.42) · view_statement(▽-1.34) · add_new_payee(▲+10.14) · view_point(▽-0.92) · login_new_device(▲+8.29) · login_success(▽-3.12) · view_stock(▽-2.00) · transfer_known_payee_small(▽-5.04) · transfer_self(▽-0.89) · open_app(▽-2.49) · biometric_auth(▽-0.39) · open_app(▽-0.47) · open_link_messenger(▲+9.63) · transfer_known_payee_small(▽-0.14)"
+    },
+    {
+      "user_index": 3288,
+      "true_label": 0,
+      "pred_score": 0.9447162747383118,
+      "logit_input": 2.8384053707122803,
+      "logit_baseline": 8.086543083190918,
+      "completeness_error": 0.0002942085266113281,
+      "top_contributors": [
+        {
+          "position": 21,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 8.962902069091797,
+          "share": 0.2796345770108316
+        },
+        {
+          "position": 8,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 8.195117950439453,
+          "share": 0.2556803950282611
+        },
+        {
+          "position": 51,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 7.927679538726807,
+          "share": 0.24733655432139817
+        },
+        {
+          "position": 9,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 3.4989089965820312,
+          "share": 0.10916285034873215
+        },
+        {
+          "position": 40,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.2408514022827148,
+          "share": 0.038713460700099324
+        },
+        {
+          "position": 37,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 0.9488073587417603,
+          "share": 0.029601946153295533
+        },
+        {
+          "position": 11,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.536622941493988,
+          "share": 0.016742158745262834
+        },
+        {
+          "position": 10,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "<1h",
+          "attribution": 0.4796231985092163,
+          "share": 0.014963817433888018
+        },
+        {
+          "position": 12,
+          "token": "night_activity",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 0.17701995372772217,
+          "share": 0.0055228651949495704
+        },
+        {
+          "position": 53,
+          "token": "open_app",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.06441295892000198,
+          "share": 0.0020096270585979945
+        }
+      ],
+      "sequence_tail": "open_app(▽-0.36) · check_notification(▽-0.08) · withdrawal_atm(▽-0.78) · view_balance(▽-0.39) · login_new_device(▲+7.93) · payment_qr(▽-1.14) · open_app(▲+0.06) · open_app(▽-0.28) · transfer_known_payee_medium(▽-1.02) · logout(▽-4.75) · biometric_auth(▽-0.65) · idle(▽-4.36) · card_payment_small(▽-1.65) · check_notification(▽-0.52) · check_notification(▽-0.29) · view_point(▽-0.80) · card_payment_small(▽-0.95) · card_payment_small(▽-1.16)"
+    },
+    {
+      "user_index": 92559,
+      "true_label": 0,
+      "pred_score": 0.9110114574432373,
+      "logit_input": 2.326047658920288,
+      "logit_baseline": 8.21660041809082,
+      "completeness_error": 9.822845458984375e-05,
+      "top_contributors": [
+        {
+          "position": 34,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 11.639198303222656,
+          "share": 0.3417803340144985
+        },
+        {
+          "position": 63,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 9.516121864318848,
+          "share": 0.2794370561079828
+        },
+        {
+          "position": 58,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 8.000689506530762,
+          "share": 0.23493700001066703
+        },
+        {
+          "position": 43,
+          "token": "view_crypto",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.7513400316238403,
+          "share": 0.05142738918844829
+        },
+        {
+          "position": 45,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 1.5223007202148438,
+          "share": 0.044701742772221914
+        },
+        {
+          "position": 54,
+          "token": "input_otp",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 1.2401951551437378,
+          "share": 0.03641782735592943
+        },
+        {
+          "position": 4,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 0.2977486848831177,
+          "share": 0.008743269280286518
+        },
+        {
+          "position": 23,
+          "token": "biometric_auth",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.07439921051263809,
+          "share": 0.002184702619284688
+        },
+        {
+          "position": 32,
+          "token": "view_savings",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.012623319402337074,
+          "share": 0.0003706786506513851
+        },
+        {
+          "position": 38,
+          "token": "transit_payment",
+          "is_risk": false,
+          "time_gap": "<1h",
+          "attribution": -0.048136673867702484,
+          "share": -0.0014135138902389064
+        }
+      ],
+      "sequence_tail": "open_app(▽-0.64) · view_card_benefit(▽-0.57) · transit_payment(▽-2.95) · view_security_center(▽-1.73) · idle(▽-1.54) · check_notification(▽-0.88) · card_payment_small(▽-0.55) · input_otp(▲+1.24) · transfer_known_payee_medium(▽-0.51) · view_balance(▽-2.95) · card_payment_small(▽-1.55) · incoming_call_long(▲+8.00) · view_transactions(▽-1.97) · login_success(▽-1.27) · logout(▽-1.05) · view_transactions(▽-1.12) · login_new_device(▲+9.52) · open_app(▽-0.95)"
+    },
+    {
+      "user_index": 89716,
+      "true_label": 0,
+      "pred_score": 0.9094662070274353,
+      "logit_input": 2.3071348667144775,
+      "logit_baseline": 7.906291484832764,
+      "completeness_error": 0.0008678436279296875,
+      "top_contributors": [
+        {
+          "position": 51,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 11.361137390136719,
+          "share": 0.35651400403849354
+        },
+        {
+          "position": 56,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 10.241990089416504,
+          "share": 0.321395012727375
+        },
+        {
+          "position": 29,
+          "token": "change_password",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 4.804008960723877,
+          "share": 0.1507504408415451
+        },
+        {
+          "position": 42,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 1.932328462600708,
+          "share": 0.06063672444604022
+        },
+        {
+          "position": 12,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 1.1360270977020264,
+          "share": 0.035648681587953625
+        },
+        {
+          "position": 20,
+          "token": "receive_otp",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 1.135350227355957,
+          "share": 0.03562744130636865
+        },
+        {
+          "position": 64,
+          "token": "login_success",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.5215306878089905,
+          "share": 0.016365702425282902
+        },
+        {
+          "position": 47,
+          "token": "trade_stock_small",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.3832775950431824,
+          "share": 0.012027301965885728
+        },
+        {
+          "position": 34,
+          "token": "withdrawal_atm",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.33488729596138,
+          "share": 0.010508807937528062
+        },
+        {
+          "position": 11,
+          "token": "login_success",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.01675846055150032,
+          "share": 0.0005258827234959282
+        }
+      ],
+      "sequence_tail": "trade_stock_small(▲+0.38) · biometric_auth(▽-0.49) · payment_bill(▽-1.96) · card_payment_medium(▽-1.71) · login_new_device(▲+11.36) · transit_payment(▽-1.64) · login_success(▽-0.49) · view_balance(▽-0.82) · card_payment_medium(▽-1.35) · add_new_payee(▲+10.24) · view_transactions(▽-1.20) · view_balance(▽-1.24) · check_notification(▽-2.03) · card_payment_medium(▽-2.54) · view_savings(▽-1.65) · check_notification(▽-0.73) · open_app(▽-0.87) · login_success(▲+0.52)"
+    },
+    {
+      "user_index": 50141,
+      "true_label": 0,
+      "pred_score": 0.7783348560333252,
+      "logit_input": 1.2559893131256104,
+      "logit_baseline": 2.254401683807373,
+      "completeness_error": 0.0061991214752197266,
+      "top_contributors": [
+        {
+          "position": 16,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 6.470373630523682,
+          "share": 0.3910544362550853
+        },
+        {
+          "position": 26,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 4.866641044616699,
+          "share": 0.29412854323907306
+        },
+        {
+          "position": 35,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 4.795849323272705,
+          "share": 0.2898500551234706
+        },
+        {
+          "position": 14,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": 0.2758045196533203,
+          "share": 0.016668988084526506
+        },
+        {
+          "position": 20,
+          "token": "payment_qr",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.06505788117647171,
+          "share": 0.003931948060525893
+        },
+        {
+          "position": 38,
+          "token": "check_notification",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": 0.059486135840415955,
+          "share": 0.0035952046426389354
+        },
+        {
+          "position": 4,
+          "token": "trade_stock_small",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": 0.012754037976264954,
+          "share": 0.0007708245946193641
+        },
+        {
+          "position": 1,
+          "token": "transit_payment",
+          "is_risk": false,
+          "time_gap": "<1h",
+          "attribution": -0.010344170033931732,
+          "share": -0.0006251777427602007
+        },
+        {
+          "position": 3,
+          "token": "view_fund",
+          "is_risk": false,
+          "time_gap": "3-6h",
+          "attribution": -0.02969972975552082,
+          "share": -0.0017949830627529892
+        },
+        {
+          "position": 46,
+          "token": "transfer_self",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": -0.051193296909332275,
+          "share": -0.0030940046133468586
+        }
+      ],
+      "sequence_tail": "add_new_payee(▲+4.80) · view_transactions(▽-0.40) · pay_subscription(▽-0.23) · check_notification(▲+0.06) · open_app(▽-0.20) · login_success(▽-0.84) · deposit_savings(▽-0.92) · view_card_benefit(▽-0.60) · view_balance(▽-0.50) · card_payment_medium(▽-0.27) · view_point(▽-0.07) · transfer_self(▽-0.05) · view_card_benefit(▽-0.76) · idle(▽-0.39) · view_balance(▽-0.85) · login_success(▽-0.44) · view_balance(▽-1.27) · transfer_known_payee_small(▽-0.58)"
+    },
+    {
+      "user_index": 12137,
+      "true_label": 0,
+      "pred_score": 0.7406594157218933,
+      "logit_input": 1.0493987798690796,
+      "logit_baseline": 8.141792297363281,
+      "completeness_error": 0.0001068115234375,
+      "top_contributors": [
+        {
+          "position": 41,
+          "token": "open_link_messenger",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 7.927494049072266,
+          "share": 0.24986468759731603
+        },
+        {
+          "position": 13,
+          "token": "add_new_payee",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 6.6352949142456055,
+          "share": 0.20913618863681907
+        },
+        {
+          "position": 40,
+          "token": "login_new_device",
+          "is_risk": true,
+          "time_gap": "1-3h",
+          "attribution": 6.164972305297852,
+          "share": 0.19431220882336997
+        },
+        {
+          "position": 19,
+          "token": "change_phone_number",
+          "is_risk": true,
+          "time_gap": "6-12h",
+          "attribution": 4.074936866760254,
+          "share": 0.12843690842139352
+        },
+        {
+          "position": 42,
+          "token": "login_unusual_location",
+          "is_risk": true,
+          "time_gap": "3-6h",
+          "attribution": 3.760653018951416,
+          "share": 0.11853107500625172
+        },
+        {
+          "position": 6,
+          "token": "incoming_call_long",
+          "is_risk": true,
+          "time_gap": "12-24h",
+          "attribution": 2.3552048206329346,
+          "share": 0.07423310734670428
+        },
+        {
+          "position": 15,
+          "token": "open_link_sms",
+          "is_risk": true,
+          "time_gap": "<1h",
+          "attribution": 0.5197409391403198,
+          "share": 0.01638158371181993
+        },
+        {
+          "position": 37,
+          "token": "transfer_known_payee_medium",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": 0.2888515889644623,
+          "share": 0.009104240456294006
+        },
+        {
+          "position": 11,
+          "token": "trade_stock_small",
+          "is_risk": false,
+          "time_gap": "6-12h",
+          "attribution": -0.011660963296890259,
+          "share": -0.0003675389641701757
+        },
+        {
+          "position": 23,
+          "token": "withdrawal_atm",
+          "is_risk": false,
+          "time_gap": "1-3h",
+          "attribution": -0.023291807621717453,
+          "share": -0.0007341286160483831
+        }
+      ],
+      "sequence_tail": "logout(▽-0.70) · view_savings(▽-0.14) · idle(▽-2.93) · transfer_known_payee_small(▽-1.03) · open_chatbot(▽-0.49) · open_chatbot(▽-0.31) · logout(▽-1.60) · open_app(▽-1.35) · biometric_auth(▽-2.33) · card_payment_small(▽-0.68) · idle(▽-0.98) · idle(▽-4.43) · logout(▽-1.69) · transit_payment(▽-1.24) · login_success(▽-0.73) · view_balance(▽-1.14) · logout(▽-1.03) · view_balance(▽-1.56)"
+    }
+  ]
+}

@@ -121,6 +121,33 @@ python run_pipeline.py --skip-data --no-pretrain
 > 의도대로 동작하고 학습이 수렴함*을 보여주는 데모로 보시면 됩니다. 난이도를 높이려면
 > `src/data_generation.py`의 위험 이벤트 기저 발생률을 키우거나 시나리오 신호를 약화시키세요.
 
+## 설명가능성 (Integrated Gradients)
+
+`src/explain.py` + `run_explain.py` — 모델이 **scam으로 예측한 (검증셋) 사례**에 대해
+시퀀스 내 각 토큰(행동)이 예측 점수에 기여한 정도를 **Integrated Gradients(IG)**로
+측정하고, 사례별 상위 기여 토큰을 리포트로 정리합니다.
+
+- **방법**: 이산 토큰은 직접 적분할 수 없으므로 **토큰 임베딩 공간**에서 IG를 계산합니다.
+  기준선(baseline)은 모든 행동 토큰을 `[PAD]`로 치환한 "행동 부재" 상태이며,
+  `IG = (E_input − E_base) ⊙ ∫₀¹ ∂f/∂E dα` 를 임베딩 차원으로 합산해 토큰별 기여도를
+  얻습니다(f = scam 로짓). 적분은 midpoint Riemann 합으로 근사하고,
+  **completeness**(Σ기여도 ≈ f(input) − f(baseline))로 근사 품질을 검증합니다(평균 오차 ≈ 0.0005).
+- **산출물**:
+  - `reports/explainability_report.md` — 전체 집계 + 정탐/오탐 사례별 상위 기여 토큰
+  - `reports/explainability.json` — 기계가독 형식
+  - `reports/figures/global_top_tokens.png` — 전체 기여도 상위 행동 막대그래프
+
+```bash
+python run_explain.py                    # 검증셋 예측-scam 사례 설명
+python run_explain.py --n-detail 30 --ig-steps 96
+```
+
+**예시 결과 — scam 예측을 가장 많이 견인한 행동(전체 집계):**
+`increase_transfer_limit`(이체한도 상향), `open_link_messenger`(메신저 링크),
+`add_new_payee`(신규 수취인), `login_new_device`(신규 기기), `incoming_call_long`(장시간 통화)
+등 **위험 선행 지표**가 상위를 차지하여, 모델이 의도한 신호를 근거로 판단함을 확인할 수 있습니다.
+오탐(FP) 사례 분석에서는 정상 사용자가 위험 행동을 우연히 군집했을 때 오탐이 발생함을 보여줍니다.
+
 ## 프로젝트 구조
 
 ```
@@ -133,6 +160,8 @@ src/model.py              # BERT 인코더 + MLM/분류 헤드
 src/pretrain.py           # MLM 사전학습
 src/finetune.py           # scam 분류 fine-tuning
 src/evaluate.py           # 지표 계산 및 리포트
+src/explain.py            # Integrated Gradients 토큰 기여도
+run_explain.py            # 설명가능성 리포트 생성기
 ```
 
 ## 한계와 확장

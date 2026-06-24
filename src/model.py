@@ -39,6 +39,22 @@ class SequenceBertEncoder(nn.Module):
         )
         self.encoder = nn.TransformerEncoder(layer, num_layers=cfg.num_layers)
 
+    def embed_tokens(self, token_ids):
+        """토큰 id -> 토큰 임베딩 (Integrated Gradients의 적분 대상)."""
+        return self.token_emb(token_ids)
+
+    def forward_from_embeds(self, token_embeds, time_buckets, attention_mask):
+        """
+        토큰 임베딩을 직접 입력으로 받아 인코딩한다(IG용).
+        token_embeds: (B, L, H)  — 위치/시간 임베딩은 내부에서 더한다.
+        """
+        B, L, _ = token_embeds.shape
+        pos = torch.arange(L, device=token_embeds.device).unsqueeze(0).expand(B, L)
+        x = token_embeds + self.pos_emb(pos) + self.time_emb(time_buckets)
+        x = self.dropout(self.ln(x))
+        key_padding_mask = attention_mask == 0
+        return self.encoder(x, src_key_padding_mask=key_padding_mask)
+
     def forward(self, token_ids, time_buckets, attention_mask):
         """
         token_ids:      (B, L) long
@@ -46,13 +62,9 @@ class SequenceBertEncoder(nn.Module):
         attention_mask: (B, L) 1=유효, 0=패딩
         반환: (B, L, H) 토큰별 표현
         """
-        B, L = token_ids.shape
-        pos = torch.arange(L, device=token_ids.device).unsqueeze(0).expand(B, L)
-        x = self.token_emb(token_ids) + self.pos_emb(pos) + self.time_emb(time_buckets)
-        x = self.dropout(self.ln(x))
-        # TransformerEncoder는 padding 위치를 True로 표시
-        key_padding_mask = attention_mask == 0
-        return self.encoder(x, src_key_padding_mask=key_padding_mask)
+        return self.forward_from_embeds(
+            self.embed_tokens(token_ids), time_buckets, attention_mask
+        )
 
 
 class MLMHead(nn.Module):
@@ -95,11 +107,19 @@ class ScamClassifier(nn.Module):
         self.dropout = nn.Dropout(cfg.dropout)
         self.classifier = nn.Linear(cfg.hidden_size, 1)
 
-    def forward(self, token_ids, time_buckets, attention_mask):
-        h = self.encoder(token_ids, time_buckets, attention_mask)
+    def _head(self, h):
         cls = h[:, 0]                       # [CLS] 위치 표현
         pooled = self.dropout(self.pooler(cls))
         return self.classifier(pooled).squeeze(-1)   # (B,) logit
+
+    def forward(self, token_ids, time_buckets, attention_mask):
+        h = self.encoder(token_ids, time_buckets, attention_mask)
+        return self._head(h)
+
+    def forward_from_embeds(self, token_embeds, time_buckets, attention_mask):
+        """토큰 임베딩을 직접 받아 로짓을 반환(IG용)."""
+        h = self.encoder.forward_from_embeds(token_embeds, time_buckets, attention_mask)
+        return self._head(h)
 
     def load_pretrained_encoder(self, ckpt_path, map_location="cpu"):
         """MLM 사전학습 체크포인트에서 인코더 가중치만 로드."""
